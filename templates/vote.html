@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+	<div class="wrapper">
+		<h2>{{ question }}</h2>
+		<br><br>
+		<form action="" method="post">
+		{% csrf_token %}
+		{% for choice in question.choice_set.all %}
+			<input id= "{{ choice.id }}" type="radio" name="answer" value="{{ choice }}"/> {{ choice }}<br><br>
+		{% endfor %}
+			<button class="btn" onclick= "save()">Submit</button>
+		</form>
+	</div>
+
+{% endblock %}

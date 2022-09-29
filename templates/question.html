@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="content-wrapper">
+	<h3>Questions</h3>
+		<ol>
+		{% for question in questions %}
+			<li><a href="{% url 'vote' question.id %}">{{ question }}</a></li>
+		{% endfor %}
+		</ol>
+</div>
+
+{% endblock %}

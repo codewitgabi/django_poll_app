@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Poll App</title>
+	<style>
+		*{
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.content-wrapper {
+			margin: 1em;
+			padding: 20px;
+		}
+		.wrapper{
+			box-shadow: hsl(0, 0%,8%) 0 0 4px;
+			background: #fff;
+			margin: 2em;
+			padding: 12px;
+			border-radius: 4px;
+		}
+		.btn{
+			display: block;
+			height: 30px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	{% block content %}
+	
+	{% endblock %}
+	<script>
+		function save () {
+			alert("Voting is successful")
+		}
+	</script>
+</body>
+</html>
